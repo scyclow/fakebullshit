@@ -3,6 +3,7 @@
   text-decoration: none;
   display: inline-block;
   word-wrap: break-word;
+  width: 100%;
 }
 
 .ArticleCard-content {
@@ -15,9 +16,6 @@
 }
 
 .ArticleCard-lead {
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 30px;
 }
 .ArticleCard-lead .ArticleCard-title {
   font-size: 60px;
@@ -26,6 +24,10 @@
 }
 .ArticleCard-lead .ArticleCard-content {
   font-size: 20px;
+}
+.ArticleCard-lead:hover {
+  color: #000;
+  background-color: #f00;
 }
 
 .ArticleCard-filler {

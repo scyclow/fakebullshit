@@ -1,6 +1,5 @@
 
-
-const API_ROOT = '/';
+const API_ROOT = './';
 
 async function get(route = '', headers = {}) {
   const response = await fetch(API_ROOT + route, { headers });

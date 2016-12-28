@@ -9,7 +9,9 @@ class FillerSection extends Component {
     return (
       <section className="FillerSection">
         {stories.map((story, i) =>
-          <ArticleCard filler key={i} {...story} />
+          <div className="FillerSlot">
+            <ArticleCard filler key={i} {...story} />
+          </div>
         )}
       </section>
     );
