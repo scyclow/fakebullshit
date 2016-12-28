@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Articles from './Articles';
+import Hero from '../components/Hero';
+import ArticleCard from '../components/ArticleCard';
+import FillerSection from '../components/FillerSection';
 import api from '../utils/api';
 
 class Main extends Component {
@@ -14,11 +16,17 @@ class Main extends Component {
   }
 
   render() {
-    const stories = this.state.stories.length ? this.state.stories : [{}];
+    const { stories } = this.state;
+
+    const lead = stories[0];
+    const filler = stories.slice(1);
 
     return (
       <div className="Main">
-        <Articles stories={stories}/>
+        <Hero>
+          { lead && <ArticleCard lead {...lead} /> }
+        </Hero>
+        { filler.length && <FillerSection stories={filler}/> }
       </div>
     );
   }
