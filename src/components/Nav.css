@@ -1,0 +1,23 @@
+.Nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.NavItem {
+  display: inline-block;
+  width: 100%;
+  border: 5px solid #000;
+  border-right: 0;
+}
+
+.NavItem a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.NavItem a:hover {
+  background-color: #f00;
+  color: #000;
+}

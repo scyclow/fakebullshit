@@ -1,0 +1,40 @@
+.ArticleCard {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.ArticleCard-content {
+  font-family: "Times New Roman";
+  font-weight: bold;
+}
+
+.ArticleCard-img {
+  color: #ccc;
+}
+
+.ArticleCard-lead {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.ArticleCard-lead .ArticleCard-title {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ArticleCard-lead .ArticleCard-content {
+  font-size: 20px;
+}
+
+.ArticleCard-filler {
+  padding: 10px;
+}
+.ArticleCard-filler:hover {
+  background-color: #000;
+  color: #f00;
+}
+.ArticleCard-filler > * {
+  /*display: inline-block;*/
+}

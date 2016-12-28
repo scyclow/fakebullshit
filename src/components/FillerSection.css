@@ -1,0 +1,9 @@
+.FillerSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.FillerSection .ArticleCard {
+  flex: 1 0 40%;
+  max-width: 50%;
+}
