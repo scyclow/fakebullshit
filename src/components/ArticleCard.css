@@ -1,5 +1,5 @@
 .ArticleCard {
-  color: #000;
+  color: var(--black);
   text-decoration: none;
   display: inline-block;
   word-wrap: break-word;
@@ -26,16 +26,16 @@
   font-size: 20px;
 }
 .ArticleCard-lead:hover {
-  color: #000;
-  background-color: #f00;
+  color: var(--black);
+  background-color: var(--red);
 }
 
 .ArticleCard-filler {
-  padding: 10px;
+  padding: var(--padding-medium);
 }
 .ArticleCard-filler:hover {
-  background-color: #000;
-  color: #f00;
+  background-color: var(--black);
+  color: var(--red);
 }
 .ArticleCard-filler > * {
   /*display: inline-block;*/

@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --red: #f00;
+  --black: #000;
+  --white: #000;
+  --beige: beige;
+
+  /* Spacing */
+  --spacing-small: 15px;
+  --padding-medium: 10px;
+  --padding-large: 20px;
+
+  /* Border */
+  --border-thick: 5px solid var(--black);
+}

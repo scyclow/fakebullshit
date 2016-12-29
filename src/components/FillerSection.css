@@ -5,5 +5,5 @@
 
 .FillerSection .FillerSlot {
   flex: 1 0 40%;
-  padding: 0 20px;
+  padding: 0 var(--padding-large);
 }

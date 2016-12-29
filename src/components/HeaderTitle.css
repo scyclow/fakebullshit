@@ -1,8 +1,8 @@
 .HeaderTitle {
   text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: beige;
+  padding: var(--padding-large);
+  background-color: var(--black);
+  color: var(--beige);
   text-decoration: none;
   display: block;
 }
@@ -13,5 +13,5 @@
 }
 
 .HeaderTitle:hover {
-  color: #f00;
+  color: var(--red);
 }

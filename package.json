@@ -5,6 +5,8 @@
   "homepage": "https://scyclow.github.io/fakebullshit",
   "devDependencies": {
     "gh-pages": "^0.12.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-properties": "^5.0.1",
     "react-scripts": "0.8.4"
   },
   "dependencies": {
@@ -16,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build",
+    "postbuild": "postcss --use postcss-custom-properties --replace build/**/*.css"
   }
 }
