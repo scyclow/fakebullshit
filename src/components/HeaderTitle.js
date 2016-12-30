@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import Link from 'react-router/Link';
+
 import './HeaderTitle.css';
 
 class HeaderTitle extends Component {
   render() {
     return (
-      <a href="/" className="HeaderTitle">
+      <Link to="/" className="HeaderTitle">
         <span className=" HeaderTitle-content">Fake Bullshit News</span>
-      </a>
+      </Link>
     );
   }
 }

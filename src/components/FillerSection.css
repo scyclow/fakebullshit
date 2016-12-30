@@ -1,9 +1,11 @@
 .FillerSection {
   display: flex;
   flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .FillerSection .FillerSlot {
   flex: 1 0 40%;
-  padding: 0 var(--padding-large);
+  padding: var(--padding-large);
 }
