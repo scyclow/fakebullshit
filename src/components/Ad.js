@@ -22,13 +22,12 @@ class Ad extends Component {
   }
 
   render() {
-    const { href, content, description } = this.props;
+    const { href, description } = this.props;
     const { outlined } = this.state;
 
     return (
       <a href={href} target="_blank" className="Ad">
         <div className={`AdContent ${outlined ? 'outlined' : ''}`}>
-          {/*content*/}
           {description}
         </div>
       </a>

@@ -23,9 +23,9 @@ class ArticleCard extends Component {
         to={`/articles/${address}`}
         className={`ArticleCard ArticleCard-${storyType}`}
       >
-        {/* ix > -1 && <div>{ix}</div>*/}
+        { ix > -1 && <div style={{display:'none'}}>{ix}</div> }
         { title && <h2 className="ArticleCard-title" style={leadStyle}>{title}</h2> }
-        { lead && img && <div className="img-container"><img src={img} /></div> }
+        { lead && img && <div className="img-container"><img src={img} alt="blah" /></div> }
         { summary && <div className="ArticleCard-summary">{summary}</div> }
         { img && <div className="ArticleCard-img">{img}</div> }
       </Link>

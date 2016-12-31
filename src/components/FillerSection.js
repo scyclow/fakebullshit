@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { times } from 'lodash';
 import ArticleCard from './ArticleCard';
-import Ad from './Ad';
 import './FillerSection.css';
 
 function createStoryColumns (stories) {

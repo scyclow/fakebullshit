@@ -9,7 +9,7 @@ import Ad from '../components/Ad';
 import stories from '../content/stories';
 import ads from '../content/ads';
 
-const adComponents = shuffle(ads).map((ad, i) => <Ad {...ad} />)
+const adComponents = shuffle(ads).map((ad, i) => <Ad {...ad} key={'ad'+i} />)
 
 class Main extends Component {
   render() {

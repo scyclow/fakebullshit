@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { sample, random } from 'lodash';
-import Ad from './Ad';
 import './Article.css';
 
 class Article extends Component {
@@ -26,11 +25,11 @@ class Article extends Component {
     return (
       <div className="Article" style={articleStyle}>
         <h1>{title}</h1>
-        { img && <div className="img-container"><img src={img} /></div> }
+        { img && <div className="img-container"><img src={img} alt="bleh" /></div> }
         <div className="byline">By Patrick Swanson</div>
         <article>
           {articleText}
-          <p>{address}<br/>{summary}<br/>{img}</p>
+          <p key="summary">{address}<br/>{summary}<br/></p>
         </article>
       </div>
     );
