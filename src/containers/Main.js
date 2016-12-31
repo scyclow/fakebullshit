@@ -4,25 +4,13 @@ import { find, shuffle } from 'lodash';
 
 import StoryPage from './StoryPage';
 import HomePage from './HomePage';
+import stories from '../content/stories/story1.json';
 
 import api from '../utils/api';
 
 class Main extends Component {
-  state = {
-    stories: []
-  }
-
-  componentDidMount() {
-    api.get('stories/story1.json')
-      .then(stories => this.setState({ stories }))
-      .catch(...err => console.error('Something bad happened:', err))
-  }
-
   render() {
-    const stories = shuffle(this.state.stories);
-
-    const lead = stories[0];
-    const filler = stories.slice(1);
+    const [lead, ...filler] = shuffle(stories);
 
     return (
       <div className="Main">
@@ -36,7 +24,7 @@ class Main extends Component {
           pattern="/articles/:articleAddress"
           render={(data) => {
             const address = data.params.articleAddress;
-            const story = find(this.state.stories, { address });
+            const story = find(stories, { address });
 
             return <StoryPage story={story} />
           }}
