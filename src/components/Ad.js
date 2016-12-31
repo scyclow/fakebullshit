@@ -26,7 +26,7 @@ class Ad extends Component {
     const { outlined } = this.state;
 
     return (
-      <a href={href} className="Ad">
+      <a href={href} target="_blank" className="Ad">
         <div className={`AdContent ${outlined ? 'outlined' : ''}`}>
           {/*content*/}
           {description}

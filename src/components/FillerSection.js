@@ -49,11 +49,12 @@ class FillerSection extends Component {
       <section className="FillerSection">
         <StoryColumn secondary>
           {secondaryStories}
-          {adComponents}
+          {adComponents.slice(0, 3)}
         </StoryColumn>
 
         <StoryColumn stories={columns[1]}>
           {fillerStories}
+          {adComponents.slice(3)}
         </StoryColumn>
       </section>
     );

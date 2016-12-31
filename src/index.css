@@ -10,3 +10,12 @@ body {
 }
 
 
+img {
+  height: 300px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-large);
+}

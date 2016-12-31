@@ -12,7 +12,7 @@ class Article extends Component {
 
     const sharePlatform = sample(['facebook.com', 'twitter.com', 'plus.google.com', 'reddit.com']);
     articleText.splice(1, 0,
-      <a className="article-share" href={`https://${sharePlatform}`}>
+      <a className="article-share" key='advert' target="_blank" href={`https://${sharePlatform}`}>
         ** SHARE THIS STORY ON {sharePlatform} **
       </a>
     );
@@ -26,6 +26,7 @@ class Article extends Component {
     return (
       <div className="Article" style={articleStyle}>
         <h1>{title}</h1>
+        { img && <div className="img-container"><img src={img} /></div> }
         <div className="byline">By Patrick Swanson</div>
         <article>
           {articleText}
