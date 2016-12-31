@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { random } from 'lodash';
+import Article from '../components/Article';
 
 class StoryPage extends Component {
   render() {
-    const { story } = this.props;
+    const { story, ads } = this.props;
 
     if (!story) return null;
 
@@ -10,11 +12,8 @@ class StoryPage extends Component {
 
     return (
       <div className="StoryPage">
-        <div>{title}</div>
-        <div>{address}</div>
-        <div>{summary}</div>
-        <div>{content}</div>
-        <div>{img}</div>
+        <Article {...story} />
+        { ads[random(0, ads.length)] }
       </div>
     );
   }

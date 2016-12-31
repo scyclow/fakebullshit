@@ -4,13 +4,15 @@ import { find, shuffle } from 'lodash';
 
 import StoryPage from './StoryPage';
 import HomePage from './HomePage';
-import stories from '../content/stories/story1.json';
+import Ad from '../components/Ad';
 
-import api from '../utils/api';
+import stories from '../content/stories/story1.json';
+import ads from '../content/ads';
+
+const adComponents = shuffle(ads).map((ad, i) => <Ad {...ad} />)
 
 class Main extends Component {
   render() {
-    console.log('stories',stories)
     const [lead, ...filler] = shuffle(stories);
 
     return (
@@ -18,7 +20,7 @@ class Main extends Component {
         <Match exactly
           pattern="/"
           component={
-            () => <HomePage lead={lead} filler={filler}/>
+            () => <HomePage lead={lead} filler={filler} ads={adComponents} />
           }
         />
         <Match
@@ -27,7 +29,7 @@ class Main extends Component {
             const address = data.params.articleAddress;
             const story = find(stories, { address });
 
-            return <StoryPage story={story} />
+            return <StoryPage story={story} ads={adComponents} />
           }}
         />
       </div>

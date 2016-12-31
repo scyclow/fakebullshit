@@ -1,12 +1,15 @@
-.Ad {
-  font-size: 30px;
+.AdContent {
+  font-size: 20px;
+  height: 170px;
+  display: flex;
+  align-items: center;
   padding: var(--padding-medium);
 }
 
-.Ad:hover {
-  background-color: var(--red);
+.AdContent:hover {
+  background-color: gold;
 }
 
-.Ad.outlined {
+.AdContent.outlined {
   border: 3px solid var(--red);
 }
