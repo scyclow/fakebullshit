@@ -25,14 +25,12 @@ class Ad extends Component {
     const { href, content, description } = this.props;
     const { outlined } = this.state;
 
-      //<a href={href} className={`Ad ${outlined ? 'outlined' : ''}`}>
     return (
-      <a href={href} className={`Ad`}>
-
-          <div className={`AdContent ${outlined ? 'outlined' : ''}`}>
-            {/*content*/}
-            {description}
-          </div>
+      <a href={href} className="Ad">
+        <div className={`AdContent ${outlined ? 'outlined' : ''}`}>
+          {/*content*/}
+          {description}
+        </div>
       </a>
     );
   }

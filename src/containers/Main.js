@@ -6,7 +6,7 @@ import StoryPage from './StoryPage';
 import HomePage from './HomePage';
 import Ad from '../components/Ad';
 
-import stories from '../content/stories/story1.json';
+import stories from '../content/stories';
 import ads from '../content/ads';
 
 const adComponents = shuffle(ads).map((ad, i) => <Ad {...ad} />)
@@ -19,9 +19,10 @@ class Main extends Component {
       <div className="Main">
         <Match exactly
           pattern="/"
-          component={
-            () => <HomePage lead={lead} filler={filler} ads={adComponents} />
-          }
+          render={() => {
+            window.scrollTo(0,0);
+            return <HomePage lead={lead} filler={filler} ads={adComponents} />
+          }}
         />
         <Match
           pattern="/articles/:articleAddress"
@@ -29,6 +30,7 @@ class Main extends Component {
             const address = data.params.articleAddress;
             const story = find(stories, { address });
 
+            window.scrollTo(0,0);
             return <StoryPage story={story} ads={adComponents} />
           }}
         />

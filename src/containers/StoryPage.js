@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { random } from 'lodash';
+import { sample } from 'lodash';
 import Article from '../components/Article';
 
 class StoryPage extends Component {
@@ -12,8 +12,8 @@ class StoryPage extends Component {
 
     return (
       <div className="StoryPage">
-        <Article {...story} />
-        { ads[random(0, ads.length)] }
+        <Article {...story} ads={ads} />
+        { sample(ads)}
       </div>
     );
   }
