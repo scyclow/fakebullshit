@@ -10,6 +10,7 @@ import api from '../utils/api';
 
 class Main extends Component {
   render() {
+    console.log('stories',stories)
     const [lead, ...filler] = shuffle(stories);
 
     return (

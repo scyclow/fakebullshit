@@ -19,8 +19,10 @@
   color: var(--red);
 }
 
-/*FIXME*/
-@media (min-width: 500) {
+@media (max-width: 689px) {
+  .HeaderTitle {
+    height: 175px;
+  }
   .HeaderTitle-content {
     font-size: 40px;
   }
