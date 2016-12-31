@@ -4,7 +4,10 @@
   background-color: var(--black);
   color: var(--beige);
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh
 }
 
 .HeaderTitle-content {
@@ -14,4 +17,11 @@
 
 .HeaderTitle:hover {
   color: var(--red);
+}
+
+/*FIXME*/
+@media (min-width: 500) {
+  .HeaderTitle-content {
+    font-size: 40px;
+  }
 }

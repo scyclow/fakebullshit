@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 import Match from 'react-router/Match';
-import { find } from 'lodash';
+import { find, shuffle } from 'lodash';
 
 import StoryPage from './StoryPage';
-import Hero from '../components/Hero';
-import ArticleCard from '../components/ArticleCard';
-import FillerSection from '../components/FillerSection';
-import api from '../utils/api';
+import HomePage from './HomePage';
 
-const HomePage = ({ lead, filler }) => (
-  <div className="HomePage">
-    <Hero>
-      { !!lead && <ArticleCard lead {...lead} /> }
-    </Hero>
-    { !!filler.length && <FillerSection stories={filler}/> }
-  </div>
-);
+import api from '../utils/api';
 
 class Main extends Component {
   state = {
@@ -29,15 +19,14 @@ class Main extends Component {
   }
 
   render() {
-    const { stories } = this.state;
+    const stories = shuffle(this.state.stories);
 
     const lead = stories[0];
     const filler = stories.slice(1);
 
     return (
       <div className="Main">
-        <Match
-          exactly
+        <Match exactly
           pattern="/"
           component={
             () => <HomePage lead={lead} filler={filler}/>

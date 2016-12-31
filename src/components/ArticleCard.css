@@ -14,12 +14,18 @@
   color: #ccc;
 }
 
+.ArticleCard-title {
+  text-transform: uppercase;
+}
+
 .ArticleCard-lead {
   width: 100%;
+  padding: var(--padding-large);
 }
 .ArticleCard-lead .ArticleCard-title {
   text-align: center;
   margin-bottom: 20px;
+
 }
 .ArticleCard-lead .ArticleCard-summary {
   font-size: 20px;
@@ -32,10 +38,19 @@
 .ArticleCard-filler {
   padding: var(--padding-medium);
 }
-.ArticleCard-filler:hover {
+.ArticleCard-filler:hover,
+.ArticleCard-secondary:hover {
   background-color: var(--black);
   color: var(--red);
 }
 .ArticleCard-filler > * {
   /*display: inline-block;*/
+}
+
+.ArticleCard-secondary {
+  min-height: 200px;
+  width: 100%;
+  font-size: 30px;
+}
+.ArticleCard-secondary .ArticleCart-title {
 }

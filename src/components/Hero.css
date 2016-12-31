@@ -1,6 +1,5 @@
 .Hero {
   width: 100%;
-  padding: var(--padding-large);
   margin-bottom: 30px;
   box-sizing: border-box;
 }

@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div>
         <HeaderTitle className="__ht" />
-        <Nav className="__hn" />
+        {/*<Nav className="__hn" />*/}
       </div>
     );
   }

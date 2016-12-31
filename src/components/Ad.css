@@ -1,0 +1,12 @@
+.Ad {
+  font-size: 30px;
+  padding: var(--padding-medium);
+}
+
+.Ad:hover {
+  background-color: var(--red);
+}
+
+.Ad.outlined {
+  border: 3px solid var(--red);
+}

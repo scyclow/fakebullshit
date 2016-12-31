@@ -6,8 +6,10 @@ import './HeaderTitle.css';
 class HeaderTitle extends Component {
   render() {
     return (
-      <Link to="/" className="HeaderTitle">
-        <span className=" HeaderTitle-content">Fake Bullshit News</span>
+      <Link to="/"className="HeaderTitle">
+        <span className=" HeaderTitle-content">
+          Fake Bullshit News
+        </span>
       </Link>
     );
   }

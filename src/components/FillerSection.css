@@ -1,11 +1,28 @@
 .FillerSection {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+  align-items: top;
   max-width: 95%;
   margin: 0 auto;
 }
 
 .FillerSection .FillerSlot {
-  flex: 1 0 40%;
-  padding: var(--padding-large);
+  /*flex: 1 0 40%;*/
+  /*padding: var(--padding-large);*/
+}
+
+.StoryColumn {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (max-width: 689px) {
+  .FillerSection {
+    display: block;
+  }
+
+  .StoryColumn {
+    width: 100%;
+  }
 }
