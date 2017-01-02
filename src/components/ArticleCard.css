@@ -10,7 +10,7 @@
   font-weight: bold;
 }
 
-.ArticleCard-img {
+.ArticleCard-link {
   color: #ccc;
 }
 
@@ -30,13 +30,22 @@
 .ArticleCard-lead .ArticleCard-summary {
   font-size: 20px;
 }
-.ArticleCard-lead:hover {
+.ArticleCard-lead:hover .ArticleCard-container {
   color: var(--black);
   background-color: var(--red);
+}
+.ArticleCard-lead:active .ArticleCard-container {
+  color: var(--black);
+  background-color: var(--off-beige);
+}
+
+.ArticleCard:active .ArticleCard-container {
+  text-decoration: underline;
 }
 
 .ArticleCard-filler {
   padding: var(--padding-medium);
+  width: 100%;
 }
 .ArticleCard-filler:hover,
 .ArticleCard-secondary:hover {
