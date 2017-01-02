@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { sample, random } from 'lodash';
 import './Article.css';
+import CommentSection from './CommentSection';
 
 class Article extends Component {
   render() {
-    const { content, title, address, summary, img, ads } = this.props;
+    const { content, title, address, summary, img, comments, ads } = this.props;
     const articleText = content.split('\n').map((txt, i) => (
       <p key={i}>{txt}</p>
     ));
@@ -24,13 +25,15 @@ class Article extends Component {
 
     return (
       <div className="Article" style={articleStyle}>
+        <p>Articles: {address}</p>
         <h1>{title}</h1>
-        { img && <div className="img-container"><img src={img} alt="bleh" /></div> }
         <div className="byline">By Patrick Swanson</div>
+        { img && <div className="img-container"><img src={img} alt="bleh" /></div> }
         <article>
           {articleText}
           <p key="summary">{address}<br/>{summary}<br/></p>
         </article>
+        <CommentSection comments={comments} />
       </div>
     );
   }

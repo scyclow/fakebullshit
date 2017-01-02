@@ -1,0 +1,36 @@
+.CommentSection {
+  padding: var(--padding-large);
+}
+
+.CommentSection .name-input {
+  display: block;
+}
+.CommentSection .comment-input {
+  display: block;
+  max-width: 95%;
+  width: 500px;
+  height: 200px;
+  font-size: 14px;
+}
+
+.CommentSection .comment-submit {
+  padding: var(--padding-small);
+  cursor: pointer;
+}
+
+.CommentSection .comment-error {
+  color: var(--red);
+  font-size: 28px;
+}
+
+.CommentSection .comment-container {
+  margin-top: var(--spacing-medium);
+}
+.CommentSection * {
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+}
+
+.CommentSection .comment-name {
+  font-weight: bold;
+}

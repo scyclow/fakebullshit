@@ -5,12 +5,12 @@
 .Article h1 {
   width: 100%;
   text-align: center;
-  margin-bottom: var(--spacing-medium);
+  font-style: italic;
   padding: var(--padding-large);
 }
 .Article .byline {
   font-size: 20px;
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-medium);
   padding-left: var(--padding-large);
 }
 .Article p {
@@ -35,11 +35,11 @@
 }
 
 @media (max-width: 599px) {
-  h1 {
+  .Article h1 {
     font-size: 65px !important;
   }
 
-  p {
+  .Article p {
     font-size: 18px;
   }
 }

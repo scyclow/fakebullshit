@@ -17,7 +17,6 @@ class Main extends Component {
 
     return (
       <div className="Main">
-        <Match pattern="/" render={data => <div>{data.location.pathname}</div>} />
         <Match exactly
           pattern="/"
           render={() => {

@@ -21,6 +21,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build",
+    "only-deploy": "gh-pages -d build",
     "postbuild": "postcss --use postcss-custom-properties --replace build/**/*.css && sed -i '' 's/fakebullshit.//g' ./build/index.html"
   }
 }
