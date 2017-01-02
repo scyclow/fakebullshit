@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Match from 'react-router/Match';
-import { find, shuffle } from 'lodash';
+import Redirect from 'react-router/Redirect';
+import { find, shuffle, get } from 'lodash';
 
 import StoryPage from './StoryPage';
 import HomePage from './HomePage';
@@ -19,9 +20,14 @@ class Main extends Component {
       <div className="Main">
         <Match exactly
           pattern="/"
-          render={() => {
-            window.scrollTo(0,0);
-            return <HomePage lead={lead} filler={filler} ads={adComponents} />
+          render={({ location }) => {
+            if (get(location, 'query.redirect')) {
+              return <Redirect to={location.query.pathname} />
+            }
+            else {
+              window.scrollTo(0,0);
+              return <HomePage lead={lead} filler={filler} ads={adComponents} />
+            }
           }}
         />
         <Match

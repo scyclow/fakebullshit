@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <META http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>FAKE BULLSHIT NEWS</title>
+    <META
+      name="description"
+      content="The only news source you can TRUST"
+    >
+    <META
+      name="keywords"
+      content="fake, news, politics, obama, trump, putin, war, god, hell, satan, fuck, shit, sex, power, the, love, wealth, happiness"
+    >
+  </head>
+  <body>
+    <script type="text/javascript">
+      // I stole this mostly from https://github.com/rafrex/react-github-pages
+      function urlize(text) {
+        return text
+          .replace(/&/g, '%26')
+          .replace(/\//g, '%2F');
+      }
+      // Incase browser doesn't support window.location.origin
+      function getOrigin() {
+        if (window.location.origin) return window.location.origin;
+        return window.location.protocol + "//" + window.location.hostname +
+          (window.location.port ? ':' + window.location.port : '');
+      }
+      var origin = getOrigin();
+      var pathname = urlize(window.location.pathname);
+      var redirectTo = origin + '/?' +
+        'redirect=true' +
+        '&pathname=' + pathname;
+      window.location.replace(redirectTo);
+    </script>
+  </body>
+</html>
