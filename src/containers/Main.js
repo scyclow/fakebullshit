@@ -5,6 +5,7 @@ import { find, shuffle, get } from 'lodash';
 
 import StoryPage from './StoryPage';
 import HomePage from './HomePage';
+import AboutPage from './AboutPage';
 import Ad from '../components/Ad';
 
 import stories from '../content/stories';
@@ -39,6 +40,10 @@ class Main extends Component {
             window.scrollTo(0,0);
             return <StoryPage story={story} ads={adComponents} />
           }}
+        />
+        <Match
+          pattern="/about"
+          component={AboutPage}
         />
       </div>
     );

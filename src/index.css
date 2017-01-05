@@ -20,3 +20,10 @@ img {
   overflow: scroll;
   padding: var(--padding-large);
 }
+
+p {
+  font-family: Verdana, sans-serif;
+  font-size: 21px;
+  padding: 0.7em 0;
+  line-height: 1.7;
+}
