@@ -6,6 +6,7 @@ import { find, shuffle, get } from 'lodash';
 import StoryPage from './StoryPage';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import TOSPage from './TOSPage';
 import Ad from '../components/Ad';
 
 import stories from '../content/stories';
@@ -44,6 +45,10 @@ class Main extends Component {
         <Match
           pattern="/about"
           component={AboutPage}
+        />
+        <Match
+          pattern="/terms-of-service"
+          component={TOSPage}
         />
       </div>
     );
