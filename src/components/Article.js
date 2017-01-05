@@ -25,7 +25,12 @@ class Article extends Component {
 
     return (
       <div className="Article" style={articleStyle}>
-        <p>Articles: {address}</p>
+        <div className="preheader">
+          <p>
+            <strong>HOME > NEWS ></strong> {address} -- PAGE VIEWS: <strong>{random(5000)}</strong> -- <a href="#comments">SKIP TO COMMENTS: {comments.length}</a>
+          </p>
+        </div>
+
         <h1>{title}</h1>
         <div className="byline">By Patrick Swanson</div>
         { img && <div className="img-container"><img src={img} alt="bleh" /></div> }
@@ -33,6 +38,7 @@ class Article extends Component {
           {articleText}
           <p key="summary">{address}<br/>{summary}<br/></p>
         </article>
+        <a name="comments" />
         <CommentSection comments={comments} />
       </div>
     );

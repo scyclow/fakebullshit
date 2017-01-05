@@ -1,3 +1,17 @@
+.Article .preheader {
+  padding: var(--padding-large);
+}
+.Article .preheader > * {
+  padding: var(--padding-small);
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 15px;
+}
+.Article .preheader a:hover {
+  background-color: var(--black);
+  color: var(--red);
+}
 .Article article {
   padding: var(--padding-large);
   max-width: 900px;
@@ -13,7 +27,7 @@
   margin-bottom: var(--spacing-medium);
   padding-left: var(--padding-large);
 }
-.Article p {
+.Article p, .preheader {
   font-family: Verdana, sans-serif;
   font-size: 21px;
   padding: 0.7em 0;
