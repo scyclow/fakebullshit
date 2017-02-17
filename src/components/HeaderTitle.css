@@ -24,6 +24,15 @@
     height: 175px;
   }
   .HeaderTitle-content {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 390px) {
+  .HeaderTitle {
+    height: 175px;
+  }
+  .HeaderTitle-content {
     font-size: 40px;
   }
 }

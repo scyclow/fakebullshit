@@ -1,4 +1,5 @@
 .Footer {
   padding: var(--padding-large);
   padding-top: 200px;
+  max-width: 100vw;
 }
