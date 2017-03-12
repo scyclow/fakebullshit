@@ -24,7 +24,8 @@ class Main extends Component {
           pattern="/"
           render={({ location }) => {
             if (get(location, 'query.redirect')) {
-              return <Redirect to={location.query.pathname} />
+              const { pathname, hash } = location.query;
+              return <Redirect to={pathname + '#' + hash} />
             }
             else {
               window.scrollTo(0,0);

@@ -29,9 +29,14 @@
       }
       var origin = getOrigin();
       var pathname = urlize(window.location.pathname);
+      var query = urlize(window.location.search.slice(1));
+      var hash = urlize(window.location.hash.slice(1));
+
       var redirectTo = origin + '/?' +
         'redirect=true' +
-        '&pathname=' + pathname;
+        '&pathname=' + pathname +
+        '&query=' + query +
+        '&hash=' + hash;
       window.location.replace(redirectTo);
     </script>
   </body>
