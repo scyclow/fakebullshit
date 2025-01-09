@@ -33,7 +33,7 @@ class Article extends Component {
 
         <h1>{title}</h1>
         <div className="byline">By Patrick Swanson</div>
-        { img && <div className="img-container"><img src={img} alt="bleh" /></div> }
+        { img && <div className="img-container"><img src={img} alt={img} /></div> }
         <article>
           {articleText}
           <p key="summary">{address}<br/>{summary}<br/></p>
