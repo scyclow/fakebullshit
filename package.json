@@ -5,9 +5,9 @@
   "homepage": "https://scyclow.github.io/fakebullshit",
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "postcss-cli": "^2.6.0",
+    "postcss-cli": "^11.0.0",
     "postcss-custom-properties": "^5.0.1",
-    "react-scripts": "0.8.4"
+    "react-scripts": "5.0.1"
   },
   "dependencies": {
     "lodash": "^4.17.3",
