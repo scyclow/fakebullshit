@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Match from 'react-router/Match';
+import Route from 'react-router-dom/Route';
 import Redirect from 'react-router/Redirect';
 import { find, shuffle, get } from 'lodash';
 
@@ -20,36 +20,37 @@ class Main extends Component {
 
     return (
       <div className="Main">
-        <Match exactly
-          pattern="/"
-          render={({ location }) => {
-            if (get(location, 'query.redirect')) {
-              const { pathname, hash } = location.query;
-              return <Redirect to={pathname + '#' + hash} />
-            }
-            else {
-              window.scrollTo(0,0);
-              return <HomePage lead={lead} filler={filler} ads={adComponents} />
-            }
-          }}
-        />
-        <Match
-          pattern="/articles/:articleAddress"
+        <Route
+          path="/articles/:articleAddress"
           render={(data) => {
-            const address = data.params.articleAddress;
+            const address = data.match.params.articleAddress;
             const story = find(stories, { address });
 
             window.scrollTo(0,0);
             return <StoryPage story={story} ads={adComponents} />
           }}
         />
-        <Match
-          pattern="/about"
+        <Route
+          path="/about"
           component={AboutPage}
         />
-        <Match
-          pattern="/terms-of-service"
+        <Route
+          path="/terms-of-service"
           component={TOSPage}
+        />
+        <Route exactly
+          path="/"
+          render={({ location }) => {
+            if (get(location, 'query.redirect')) {
+              const { pathname, hash } = location.query;
+              return <Redirect to={pathname + '#' + hash} />
+            }
+            else {
+              if (location.pathname !== '/') return <div/>
+              window.scrollTo(0,0);
+              return <HomePage lead={lead} filler={filler} ads={adComponents} />
+            }
+          }}
         />
       </div>
     );
